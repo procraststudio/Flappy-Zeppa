@@ -35,12 +35,12 @@ public class PointsDisplay : MonoBehaviour
     }
 
 
-    public void DisplayText()
+
+    public void DisplayText(int scoreValue)
     {
         //  pointsCanvas.SetActive(true); 
         pointsText.enabled = true;
-
-        pointsText.text = "100";
+        pointsText.text = scoreValue.ToString();
 
         timeWhenDisappear = Time.time + timeToAppear;
 
@@ -49,30 +49,31 @@ public class PointsDisplay : MonoBehaviour
 
     }
 
-    public void DisplaySecondText()
-    {
-        //  pointsCanvas.SetActive(true); 
-        pointsText.enabled = true;
-        pointsText.text = "500";
+    //public void DisplaySecondText()
+    //{
+    //    //  pointsCanvas.SetActive(true); 
+    //    pointsText.enabled = true;
+    //    pointsText.text = "500";
 
-        timeWhenDisappear = Time.time + timeToAppear;
+    //    timeWhenDisappear = Time.time + timeToAppear;
 
-      //   GetComponent<Animator>().SetTrigger("MoveUp");
+    //  //   GetComponent<Animator>().SetTrigger("MoveUp");
 
 
-    }
+    //}
 
-    public void DisplayThirdText()
-    {
+    //public void DisplayThirdText()
+    //{
        
-        pointsText.enabled = true;
-        pointsText.text = "150";
+    //    pointsText.enabled = true;
+    //    pointsText.text = "150";
 
-        timeWhenDisappear = Time.time + timeToAppear;
+    //    timeWhenDisappear = Time.time + timeToAppear;
 
 
 
-    }
+    //}
+
 
 }
 
