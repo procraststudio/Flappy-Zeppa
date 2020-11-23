@@ -34,7 +34,7 @@ public class Hangar : MonoBehaviour
 
         upgrade01Installed = FindObjectOfType<Upgrades>().LifeBasicUpgradeOnOff();
         upgrade02Installed = FindObjectOfType<Upgrades>().ShieldBasicUpgradeOnOff();
-        upgrade03Installed = FindObjectOfType<Upgrades>().CoinsBasicUpgradeOnOff();
+        upgrade02Installed = FindObjectOfType<Upgrades>().CoinsBasicUpgradeOnOff();
 
         //  lifeBasicCost_text = GetComponent<Text>();
         lifeBasicCost_text.text = lifeBasicCost.ToString();
@@ -66,18 +66,18 @@ public class Hangar : MonoBehaviour
 
     public void Upgrade02Appear()
     {
-        if ((actualPoints < shieldBasicCost) || (upgrade02Installed))
+        if ((actualPoints < coinsBasicCost) || (upgrade03Installed))
         {
-            upgrade02Canvas.SetActive(false);
+            upgrade03Canvas.SetActive(false);
 
         }
     }
 
     public void Upgrade03Appear()
     {
-        if ((actualPoints < coinsBasicCost) || (upgrade03Installed))
+        if ((actualPoints < shieldBasicCost) || (upgrade02Installed))
         {
-            upgrade03Canvas.SetActive(false);
+            upgrade02Canvas.SetActive(false);
 
         }
     }
