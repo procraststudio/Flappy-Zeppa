@@ -63,17 +63,20 @@ public class Gamesession : MonoBehaviour
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;
-        FindObjectOfType<PointsDisplay>().DisplayText();
+        FindObjectOfType<PointsDisplay>().DisplayText(scoreValue);
 
-        if (scoreValue ==500)
-        {
-            FindObjectOfType<PointsDisplay>().DisplaySecondText();
-        }
 
-        else if (scoreValue ==150)
-        {
-            FindObjectOfType<PointsDisplay>().DisplayThirdText();
-        }
+
+
+        //if (scoreValue == 500)
+        //{
+        //    FindObjectOfType<PointsDisplay>().DisplaySecondText();
+        //}
+
+        //else if (scoreValue == 150)
+        //{
+        //    FindObjectOfType<PointsDisplay>().DisplayThirdText();
+        //}
 
     }
 
@@ -105,6 +108,8 @@ public class Gamesession : MonoBehaviour
 
 
     }
+
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);

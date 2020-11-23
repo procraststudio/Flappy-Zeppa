@@ -10,7 +10,7 @@ public class WeatherChange : MonoBehaviour
 
     public float timer;
     [SerializeField] public float durationOfRain;
-    [SerializeField] public bool weatherTimerOn = false;
+    [SerializeField] public bool weatherTimerOn = true;
     
 
   

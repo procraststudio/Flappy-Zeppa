@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
   
 
 
-    [SerializeField] int scoreValue = 100;
+    [SerializeField] int scoreValue;
 
     [SerializeField] float speed = 1.5f;
 
