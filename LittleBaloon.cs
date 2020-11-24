@@ -27,7 +27,7 @@ public class LittleBaloon : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      shieldBasicUpgrade = FindObjectOfType<Upgrades>().ShieldBasicUpgradeOnOff();
+        CheckShield();
     }
 
     // Update is called once per frame
@@ -35,6 +35,13 @@ public class LittleBaloon : MonoBehaviour
     {
         Jump();
        
+
+    }
+
+    private void CheckShield()
+    {
+        
+        shieldBasicUpgrade = FindObjectOfType<Upgrades>().ShieldBasicUpgradeOnOff();
 
     }
 

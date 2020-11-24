@@ -16,11 +16,6 @@ public class Gamesession : MonoBehaviour
 
  
 
-    //  public bool nightLevel = false;
-    // public GameObject nightCanvas;
-    // public GameObject baloons;
-
- 
     private void Awake()
     {
         SetUpSingleton();
@@ -38,9 +33,22 @@ public class Gamesession : MonoBehaviour
 
     private void Update()
     {
-        scoreText.text = score.ToString();
+      //  UpdateScore();
+      //? not needed?
        
     }
+
+    //private void UpdateScore()
+    //{
+    //    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+    //    if (currentSceneIndex > 0)
+    //    {
+    //        scoreText.text = score.ToString();
+    //    }
+    //}
+
+
 
     private void SetUpSingleton()
     {
@@ -65,10 +73,7 @@ public class Gamesession : MonoBehaviour
         score += scoreValue;
         FindObjectOfType<PointsDisplay>().DisplayText(scoreValue);
 
-
-
-
-        //if (scoreValue == 500)
+           //if (scoreValue == 500)
         //{
         //    FindObjectOfType<PointsDisplay>().DisplaySecondText();
         //}
@@ -106,7 +111,6 @@ public class Gamesession : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
 
-
     }
 
 
@@ -123,12 +127,5 @@ public class Gamesession : MonoBehaviour
     }
 
     
-    //public void Night()
-    //{
-       // if(nightLevel)
-       // {
-         //  baloons.SetActive(false);
-       // }
-
-   // }
+ 
 }
