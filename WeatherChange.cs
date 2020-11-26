@@ -8,6 +8,8 @@ public class WeatherChange : MonoBehaviour
     public GameObject yellowSun;
     public GameObject sunnyBG;
 
+   public GameObject rainCloudsSpawner;
+
     public float timer;
     [SerializeField] public float durationOfRain;
     [SerializeField] public bool weatherTimerOn = true;
@@ -27,8 +29,11 @@ public class WeatherChange : MonoBehaviour
     {
         if (timer >= durationOfRain)
         {
+            Destroy(GameObject.FindWithTag("cloud_rain"));
+            Destroy(rainCloudsSpawner);
             blackSun.SetActive(false);
-            yellowSun.SetActive(true);
+             yellowSun.SetActive(true);
+   
             sunnyBG.SetActive(true);
             weatherTimerOn = false;
             Debug.Log("Weather changed");

@@ -52,6 +52,8 @@ public class Hangar : MonoBehaviour
         Upgrade03Appear();
 
         actualPoints = FindObjectOfType<Gamesession>().GetScore();
+
+        NoMoney();
     }
 
     public void Upgrade01Appear()
@@ -131,6 +133,16 @@ public class Hangar : MonoBehaviour
             notEnoughPointsCanvas.SetActive(true);
             Debug.Log("Not enough gold");
         }
+    }
+
+    public void NoMoney()
+    {
+        if ((actualPoints < lifeBasicCost) && (actualPoints < shieldBasicCost) && (actualPoints < coinsBasicCost))
+        {
+            notEnoughPointsCanvas.SetActive(true);
+
+        }
+
     }
 
 

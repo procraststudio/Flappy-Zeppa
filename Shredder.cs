@@ -25,15 +25,14 @@ public class Shredder : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Award destroyed");
         }
+
+        
     }
 
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-     
-            Destroy(collision.gameObject);
-            Debug.Log("Object destroyed");
-       
-        
+           
+        Destroy(collision.gameObject);
     }
 }

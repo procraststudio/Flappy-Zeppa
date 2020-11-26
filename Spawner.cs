@@ -17,6 +17,8 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] bool timerOn;
 
+    [SerializeField] public bool randomizer = true;
+
 
  
 
@@ -28,7 +30,14 @@ public class Spawner : MonoBehaviour
         if(timer > maxTime)
             {
             SpawnObjects();
-            timer = Random.Range(0, 3);
+            if (randomizer)
+            {
+                timer = Random.Range(0, 3);
+            }
+            else
+            {
+                timer = 0;
+            }
            
             
         }
