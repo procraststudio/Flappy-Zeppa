@@ -16,14 +16,14 @@ public class Shredder : MonoBehaviour
          else if (collision.tag=="baloon")
         {
             Destroy(collision.gameObject);
-            Debug.Log("Baloon destroyed");
+          
            
         }
         else if(collision.tag == "award")
         {
             
             Destroy(collision.gameObject);
-            Debug.Log("Award destroyed");
+          
         }
 
         

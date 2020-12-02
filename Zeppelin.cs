@@ -9,6 +9,7 @@ public class Zeppelin : MonoBehaviour
 
     
     [SerializeField] AudioClip BaloonExplosion;
+    [SerializeField] GameObject explosion;
     [SerializeField] [Range(0, 1)] float fireSoundVolume;
 
    
@@ -46,14 +47,18 @@ public class Zeppelin : MonoBehaviour
             if (shieldBasicUpgrade)
             {
                 FindObjectOfType<Health>().ModifyHealth(-15);
+                GameObject baloonExplosion = Instantiate(explosion, transform.position, transform.rotation);
                 AudioSource.PlayClipAtPoint(BaloonExplosion, Camera.main.transform.position, fireSoundVolume);
+                Destroy(baloonExplosion, 2f);
                 Destroy(this.gameObject);
             }
 
             else
             {
                 FindObjectOfType<Health>().ModifyHealth(-20);
+                GameObject baloonExplosion = Instantiate(explosion, transform.position, transform.rotation);
                 AudioSource.PlayClipAtPoint(BaloonExplosion, Camera.main.transform.position, fireSoundVolume);
+                Destroy(baloonExplosion, 2f);
                 Destroy(this.gameObject);
             }
 

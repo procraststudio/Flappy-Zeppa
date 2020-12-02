@@ -11,8 +11,6 @@ public class Rain : MonoBehaviour
     public int damage = 2;
 
 
-
-
     void Update()
     {
      

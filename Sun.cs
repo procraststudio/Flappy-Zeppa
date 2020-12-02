@@ -13,7 +13,7 @@ public class Sun : MonoBehaviour
             {
 
             FindObjectOfType<LittleBaloon>().Die();
-            Debug.Log("Sun trigger entered");
+         
         }
 
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Upgrades : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     [SerializeField] GameObject lifeBasicIcon;
     [SerializeField] GameObject shieldBasicIcon;
     [SerializeField] GameObject coinsBasicIcon;
@@ -12,13 +12,7 @@ public class Upgrades : MonoBehaviour
     public static bool lifeBasicUpgrade;
     public static bool shieldBasicUpgrade;
     public static bool coinsBasicUpgrade;
-    private void Awake()
-    {
-    // SetUpSingleton();
-    }
-
-
-
+   
     void Start()
     {
        LifeBasicUpgradeOnOff();
@@ -35,11 +29,7 @@ public class Upgrades : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
     public void ShowUpgrade01()
     {
@@ -77,8 +67,6 @@ public class Upgrades : MonoBehaviour
         lifeBasicIcon.SetActive(true);
         Debug.Log("Life basic icon is on");
 
-       
-
     }
     public bool LifeBasicUpgradeOnOff()
         {
@@ -92,7 +80,6 @@ public class Upgrades : MonoBehaviour
          Debug.Log("Shield upgrade installed");
         shieldBasicIcon.SetActive(true);
         Debug.Log("Shield basic icon is on");
-
 
     }
     public bool ShieldBasicUpgradeOnOff()
@@ -116,21 +103,4 @@ public class Upgrades : MonoBehaviour
         return coinsBasicUpgrade;
     }
 
-
-
-
-
-    //private void SetUpSingleton()
-    //{
-    //    int numberUpgrades = FindObjectsOfType<Upgrades>().Length;
-
-    //    if (numberUpgrades > 1)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //}
 }

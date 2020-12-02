@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MissingShop : MonoBehaviour
 {
 
-
+    // Collider if player misses the langing zone (shop)
         public void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "Player")

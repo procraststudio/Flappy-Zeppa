@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class LifeUpdater : MonoBehaviour
 {
-   
+
+    // Displays health change numbers under health bar 
+
     Text lifeText;
     [SerializeField] GameObject lifeCanvas;
 
@@ -15,18 +17,17 @@ public class LifeUpdater : MonoBehaviour
     public int lifeNow;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        //  pointsCanvas.SetActive(false);
+
         lifeText = GetComponent<Text>();
         lifeText.enabled = false;
 
-        // gameSession = FindObjectOfType<Gamesession>();
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
          lifeNow = FindObjectOfType<Health>().GetHealth();
@@ -42,14 +43,13 @@ public class LifeUpdater : MonoBehaviour
 
     public void DisplayLife()
     {
-        //  pointsCanvas.SetActive(true); 
+
         lifeText.enabled = true;
         lifeNow = FindObjectOfType<Health>().GetHealth();
         lifeText.text = lifeNow.ToString();
 
         timeWhenDisappear = Time.time + timeToAppear;
 
-        //   GetComponent<Animator>().SetTrigger("MoveUp");
     }
 
    

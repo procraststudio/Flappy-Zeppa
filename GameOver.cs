@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    // Script activates Game Over canvas
 
     public GameObject gameOverCanvas;
 

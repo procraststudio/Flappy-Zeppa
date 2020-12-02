@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class WeatherChange : MonoBehaviour
 {
+    // Weather change during level, stops the rain, activates sun
+    
     public GameObject blackSun;
     public GameObject yellowSun;
     public GameObject sunnyBG;
 
    public GameObject rainCloudsSpawner;
+    [SerializeField] public GameObject goodWeatherSpawners;
 
     public float timer;
     [SerializeField] public float durationOfRain;
     [SerializeField] public bool weatherTimerOn = true;
-    
 
-  
+
+
+    private void Start()
+    {
+        goodWeatherSpawners.SetActive(false);
+    }
+
+
     void Update()
     {
             if (weatherTimerOn)
@@ -33,6 +42,7 @@ public class WeatherChange : MonoBehaviour
             Destroy(rainCloudsSpawner);
             blackSun.SetActive(false);
              yellowSun.SetActive(true);
+            goodWeatherSpawners.SetActive(true);
    
             sunnyBG.SetActive(true);
             weatherTimerOn = false;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Hangar : MonoBehaviour
 {
-
+    // Shop script
 
     [SerializeField] int lifeBasicCost;
     [SerializeField] Text lifeBasicCost_text;
@@ -36,7 +36,6 @@ public class Hangar : MonoBehaviour
         upgrade02Installed = FindObjectOfType<Upgrades>().ShieldBasicUpgradeOnOff();
         upgrade03Installed = FindObjectOfType<Upgrades>().CoinsBasicUpgradeOnOff();
 
-        //  lifeBasicCost_text = GetComponent<Text>();
         lifeBasicCost_text.text = lifeBasicCost.ToString();
         shieldBasicCost_text.text = shieldBasicCost.ToString();
         coinsBasicCost_text.text = coinsBasicCost.ToString();
@@ -50,7 +49,6 @@ public class Hangar : MonoBehaviour
         Upgrade01Appear();
         Upgrade02Appear();
         Upgrade03Appear();
-
         actualPoints = FindObjectOfType<Gamesession>().GetScore();
 
         NoMoney();
@@ -91,7 +89,6 @@ public class Hangar : MonoBehaviour
                 {
             FindObjectOfType<Gamesession>().BuyUpgrades(lifeBasicCost);
              FindObjectOfType<Upgrades>().LifeBasicUpgradeOn();
-            
             upgrade01Canvas.SetActive(false);
         }
       else
@@ -107,8 +104,6 @@ public class Hangar : MonoBehaviour
         {
             FindObjectOfType<Gamesession>().BuyUpgrades(shieldBasicCost);
             FindObjectOfType<Upgrades>().ShieldBasicUpgradeOn();
-          
-
             upgrade02Canvas.SetActive(false);
         }
         else
@@ -124,8 +119,6 @@ public class Hangar : MonoBehaviour
         {
             FindObjectOfType<Gamesession>().BuyUpgrades(coinsBasicCost);
             FindObjectOfType<Upgrades>().CoinsBasicUpgradeOn();
-
-
             upgrade03Canvas.SetActive(false);
         }
         else

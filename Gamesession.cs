@@ -12,6 +12,7 @@ public class Gamesession : MonoBehaviour
     [SerializeField] Text scoreText;
     public int price;
 
+    // Points added for testing purposes
     [SerializeField] public int debugPoints = 0;
 
  
@@ -26,27 +27,9 @@ public class Gamesession : MonoBehaviour
         scoreText = GetComponent<Text>();
         GetScore();
 
-
     }
     
 
-
-    private void Update()
-    {
-      //  UpdateScore();
-      //? not needed?
-       
-    }
-
-    //private void UpdateScore()
-    //{
-    //    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-    //    if (currentSceneIndex > 0)
-    //    {
-    //        scoreText.text = score.ToString();
-    //    }
-    //}
 
 
 
@@ -73,15 +56,6 @@ public class Gamesession : MonoBehaviour
         score += scoreValue;
         FindObjectOfType<PointsDisplay>().DisplayText(scoreValue);
 
-           //if (scoreValue == 500)
-        //{
-        //    FindObjectOfType<PointsDisplay>().DisplaySecondText();
-        //}
-
-        //else if (scoreValue == 150)
-        //{
-        //    FindObjectOfType<PointsDisplay>().DisplayThirdText();
-        //}
 
     }
 

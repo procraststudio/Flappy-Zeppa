@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
+    // Script attached to hearts (lives)
+    
     public float speed;
 
     public static bool lifeBasicUpgrade;
 
 
     [SerializeField] AudioClip blurpSound;
+    [SerializeField] [Range(0, 1)] float blurpVolume;
 
     private void Start()
     {
@@ -36,10 +39,9 @@ public class Life : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            //AudioSource.PlayClipAtPoint(PickupLife, Camera.main.transform.position);
+        
             Destroy(this.gameObject);
-           // Debug.Log("Life hit");
-            AudioSource.PlayClipAtPoint(blurpSound, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(blurpSound, Camera.main.transform.position, blurpVolume);
             
             if (lifeBasicUpgrade)
             {

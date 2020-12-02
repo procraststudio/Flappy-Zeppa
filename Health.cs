@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    // Health script from Tilevania tutorial by Ben Tristem, Gamedev.tv
+
     [SerializeField] int health = 100;
-  //  [SerializeField] GameObject deathVFX;
     [SerializeField] int maxHealth = 100;
 
 

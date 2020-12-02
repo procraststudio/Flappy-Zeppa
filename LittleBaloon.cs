@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LittleBaloon : MonoBehaviour
 {
+    // Player script 
 
     public float velocity = 1;
     private Rigidbody2D rb;
@@ -35,7 +36,6 @@ public class LittleBaloon : MonoBehaviour
     {
         Jump();
        
-
     }
 
     private void CheckShield()
@@ -65,6 +65,8 @@ public class LittleBaloon : MonoBehaviour
         {
             Debug.Log("mountain hit");
             AudioSource.PlayClipAtPoint(scratchSound, Camera.main.transform.position, scratchSoundVolume);
+           
+           
             if (shieldBasicUpgrade)
             {
                 FindObjectOfType<Health>().ModifyHealth(-10);
@@ -73,24 +75,10 @@ public class LittleBaloon : MonoBehaviour
             {
                 FindObjectOfType<Health>().ModifyHealth(-15);
             }
-       
 
-
+        
         }
-        //else if (collision.gameObject.tag == "baloon")
-        //{
-        //    Debug.Log("baloon hit");
-
-        //    if (shieldBasicUpgrade)
-        //    {
-        //        FindObjectOfType<Health>().ModifyHealth(-15);
-        //    }
-        //    else
-        //    {
-        //        FindObjectOfType<Health>().ModifyHealth(-20);
-
-        //    }
-        //}
+   
 
         else if (collision.gameObject.tag == "poison_cloud")
         {
@@ -135,9 +123,7 @@ public class LittleBaloon : MonoBehaviour
 
     public void Die()
     {
-       // FindObjectOfType<GameSession>().AddToScore(scoreValue);
-       
-        
+  
         GameObject zeppExplosion = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(this.gameObject);
          AudioSource.PlayClipAtPoint(explosionSound, Camera.main.transform.position);

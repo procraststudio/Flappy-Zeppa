@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class PoisonCloud : MonoBehaviour
 {
+    // Interaction between player and rain clouds
+    
     public float speed;
 
     private float timer = 0f;
@@ -15,19 +17,15 @@ public class PoisonCloud : MonoBehaviour
 
     [SerializeField] AudioClip scratchSound;
     [SerializeField] [Range (0, 1)] float soundVolume;
-    // [SerializeField] GameObject rainVFX;
+  
 
 
 
-    void Start()
-    {
-      
-    }
+  
 
     void Update()
     {
         Move();
-        
         timer += Time.deltaTime;
     }
     public void Move()

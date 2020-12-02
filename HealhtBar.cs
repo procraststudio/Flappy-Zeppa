@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class HealhtBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+  
+   // Script from Tilevania tutorial by Ben Tristem, Gamedev.tv
+    
+    
     [SerializeField] private Image foregroundImage;
     [SerializeField] private float updateSpeedSeconds = 0.1f;
-
-    
 
 
     private void Awake()

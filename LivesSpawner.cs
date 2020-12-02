@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LivesSpawner : MonoBehaviour
 {
+    // Script spawns hearts (lives) if needed
+    
     public float maxTime = 1;
     private float timer = 0;
     public GameObject heart;
@@ -12,11 +14,7 @@ public class LivesSpawner : MonoBehaviour
     public int timeToDestroy = 20;
     public int health;
 
-    void Start()
-    {
-      
-       
-    }
+  
 
     // Update is called once per frame
     void Update()
