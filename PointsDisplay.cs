@@ -38,7 +38,7 @@ public class PointsDisplay : MonoBehaviour
     {
 
         pointsText.enabled = true;
-        pointsText.text = scoreValue.ToString();
+        pointsText.text = "+"+scoreValue.ToString();
 
         timeWhenDisappear = Time.time + timeToAppear;
 

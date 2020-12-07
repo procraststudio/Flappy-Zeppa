@@ -37,6 +37,9 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1;
         FindObjectOfType<Gamesession>().ResetScore();
+        FindObjectOfType<Upgrades>().ResetUpgrades();
+        Debug.Log("Upgrades reset");
+
         SceneManager.LoadScene(0);
         gameOverCanvas.SetActive(false);
     }

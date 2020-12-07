@@ -14,8 +14,7 @@ public class Gamesession : MonoBehaviour
 
     // Points added for testing purposes
     [SerializeField] public int debugPoints = 0;
-
- 
+    public static int actualLevel;
 
     private void Awake()
     {
@@ -24,6 +23,7 @@ public class Gamesession : MonoBehaviour
 
     private void Start()
     {
+       
         scoreText = GetComponent<Text>();
         GetScore();
 
@@ -100,6 +100,16 @@ public class Gamesession : MonoBehaviour
         Application.Quit();
     }
 
-    
+    public void SetActualLevel()
+    {
+        actualLevel = SceneManager.GetActiveScene().buildIndex;
+      
+ 
+    }
+
+    public void ExitShop()
+    {
+        SceneManager.LoadScene(actualLevel + 1);
+    }
  
 }

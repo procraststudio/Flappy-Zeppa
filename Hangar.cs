@@ -40,6 +40,7 @@ public class Hangar : MonoBehaviour
         shieldBasicCost_text.text = shieldBasicCost.ToString();
         coinsBasicCost_text.text = coinsBasicCost.ToString();
         notEnoughPointsCanvas.SetActive(false);
+        
 
     }
 
@@ -50,8 +51,7 @@ public class Hangar : MonoBehaviour
         Upgrade02Appear();
         Upgrade03Appear();
         actualPoints = FindObjectOfType<Gamesession>().GetScore();
-
-        NoMoney();
+         NoMoney();
     }
 
     public void Upgrade01Appear()

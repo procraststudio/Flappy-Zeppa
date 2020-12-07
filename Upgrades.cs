@@ -103,4 +103,11 @@ public class Upgrades : MonoBehaviour
         return coinsBasicUpgrade;
     }
 
+    public void ResetUpgrades()
+    {
+        lifeBasicUpgrade = false;
+        shieldBasicUpgrade= false;
+        coinsBasicUpgrade = false;
+     }
+
 }

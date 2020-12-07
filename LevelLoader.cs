@@ -9,12 +9,22 @@ public class LevelLoader : MonoBehaviour
   
     public void LoadNextScene()
     {
-        FindObjectOfType<Gamesession>().LoadNextScene();
+        // FindObjectOfType<Gamesession>().LoadNextScene();
+        FindObjectOfType<Gamesession>().ExitShop();
     }
     public void LoadStartScene()
     {
+        //ResetGame();
+        // SceneManager.LoadScene(0);
+        // FindObjectOfType<GameOver>().QuitToMenu();
+        FindObjectOfType<Gamesession>().ResetScore();
+        Debug.Log("Points reset");
+        FindObjectOfType<Upgrades>().ResetUpgrades();
+        Debug.Log("Upgrades reset");
+
         SceneManager.LoadScene(0);
-        ResetGame();
+       
+
 
     }
     public void QuitGame()
@@ -24,7 +34,8 @@ public class LevelLoader : MonoBehaviour
     public void ResetGame()
 
     {
-        Destroy(gameObject);
+         
+       Destroy(gameObject);
     }
 
     public void StartFirstLevel()

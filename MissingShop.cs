@@ -12,7 +12,7 @@ public class MissingShop : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(currentSceneIndex + 2);
+                SceneManager.LoadScene(currentSceneIndex + 1);
             }
         }
 
