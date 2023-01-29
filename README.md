@@ -26,9 +26,7 @@
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Unity 2020.1.11
 
 
 ## Features
@@ -61,7 +59,7 @@ Include areas you believe need improvement / could be improved. Also add TODOs f
 
 Room for improvement:
 - Improvements for Upgrades screen (more clear)
-- Working version for Android
+- Working version for Android and WebGL
 
 To do:
 - More levels 
