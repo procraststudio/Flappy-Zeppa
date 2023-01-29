@@ -33,54 +33,52 @@
 
 ## Features
 List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
+- Move system
+- Obstacles
+- Gaining gold&health system
+- Loading next level  
+- Tweaking game difficulty
+- System of upgrades
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+https://img.itch.zone/aW1hZ2UvODQ4MTgwLzQ3NTQ5ODEuanBn/original/%2BrlBYu.jpg
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+Download game at https://procraststudio.itch.io/flappy-zeppa
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
+Click on FlappyZepp.exe
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _complete_
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Improvements for Upgrades screen (more clear)
+- Working version for Android
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+- More levels 
 
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- Healthbar script from Tilevania tutorial by Ben Tristem, Gamedev.tv
+- Backgrounds: https://wall.alphacoders.com/big.php?i=101848
+- night photo: https://unsplash.com/photos/xjM0j6qBPGM Nathan Anderson
+- Music: Sunken Streets https://freemusicarchive.org/music/Sro/Vol_1_New_Blok_Dreams/Sunken_Streets
+- Sounds&SFX: most from Kenney Assets (www.kenney.nl)
+- Banthers font: https://www.behance.net/gallery/29369733/Banthers-Free-Font
+- Many thanks to my family
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by procrast studio https://procraststudio.itch.io/
 
 
 <!-- Optional -->
